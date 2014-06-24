@@ -1,6 +1,8 @@
 {
+	"color_scheme": "Packages/Theme - Nexus/Nexus.tmTheme",
 	"copy_with_empty_selection": false,
 	"find_selected_text": true,
+	"font_size": 13,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -12,5 +14,6 @@
 		"draw_active"
 	],
 	"tab_size": 2,
+	"theme": "Nexus.sublime-theme",
 	"translate_tabs_to_spaces": true
 }

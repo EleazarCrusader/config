@@ -11,7 +11,136 @@ ZSH_THEME="../../.oh-my-zsh-themes/doubleend"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias la="ls -alht"
+alias apstart="sudo /usr/local/bin/apachectl start"
+alias apstop="sudo /usr/local/bin/apachectl stop"
+alias tcstart="sudo tomcatctl start dr"
+alias tcstop="sudo tomcatctl stop dr"
+alias cdtrunk="cd /var/webapps/lampo.trunk"
+
+# alias cddev="cd /var/webapps/lampo.chrisdev"
+alias cdrelease="cd /var/webapps/lampo.release"
+alias svns="svn status -u"
+alias svnu="sudo -H -u web-code svn up"
+alias sshtest1="ssh app1.test.daveramsey.com"
+
+#bundle alias
+alias bi="bundle install"
 alias be="bundle exec"
+alias ber="bundle exec rspec"
+
+#rails alias
+alias rs="rails s"
+alias rc="rails c"
+
+# git alias
+alias gst="git status"
+alias gco="git checkout"
+alias gcom="git checkout master"
+alias gcou="git checkout updates"
+alias gcob="git checkout -b"
+alias grb="git rebase"
+alias grbm="git rebase master"
+alias gcam="git commit -am"
+alias gb="git branch"
+alias gpom="git pull origin master"
+alias gf="git fetch"
+alias gm="git merge"
+alias gmu="git merge updates"
+alias ga="git add ."
+alias grd="git add -u ."
+alias gpushom="git push origin master"
+
+
+editzrc() {
+  cd ~
+  subl .zshrc
+}
+
+reloadzrc() {
+  cd ~
+  . ~/.zshrc
+}
+
+startlocal() {
+  echo "STARTING APACHE & TOMCAT"
+  apstart
+  tcstart
+}
+
+stoplocal() {
+  echo "STOPPING APACHE & TOMCAT"
+  tcstop
+  apstop
+}
+
+restartlocal() {
+  echo "*** RESTARTING APACHE & TOMCAT ***"
+  stoplocal
+  startlocal
+}
+
+cdmods() {
+  if [ -z "$1" ]
+  then
+    echo "enter the environment name (i.e. trunk, release, test1, etc)"
+  else
+    cd /var/webapps/lampo.$1/dr/modules
+    pwd
+  fi
+}
+
+cdcss() {
+  if [ -z "$1" ]
+  then
+    echo "enter the environment name (i.e. trunk, release, test1, etc)"
+  else
+    cd /var/webapps/lampo.$1/dr/resources/css
+  fi
+}
+
+cdgc() {
+  if [ -z "$1" ]
+  then
+    echo "enter the environment (i.e. trunk, release, test1, etc)"
+  else
+    cd /var/webapps/lampo.$1/dr/modules/gc
+ fi
+}
+
+cddr() {
+  if [ -z "$1" ]
+  then
+    echo "enter the environment (i.e. trunk, release, test1, etc)"
+  else
+    cd /var/webapps/lampo.$1/dr
+ fi
+}
+
+cdsites() {
+  if [ -z "$1" ]
+  then
+    echo "enter the environment (i.e. trunk, release, test1, etc)"
+  else
+    cd /var/webapps/lampo.$1/dr/sites
+ fi
+}
+
+updatemaps() {
+  if [ -z "$1" ]
+  then
+    echo "enter the environment name (i.e. dr, fpucentral, core, coaching, andresgutierrez, elp, entreleadership, foundationsu, service, etc)"
+  elif [ "$1" == "dr" ]
+  then
+    sudo /opt/local/apache2/bin/httxt2dbm -v -i /opt/local/etc/apache22/Maps/daveramsey.com.map -o /opt/local/etc/apache22/Maps/daveramsey.com.dbm
+  elif [ "$1" == "fpucentral" ]
+  then
+    sudo /opt/local/apache2/bin/httxt2dbm -v -i /opt/local/etc/apache22/Maps/daveramsey.com.map -o /opt/local/etc/apache22/Maps/daveramsey.com.dbm
+  else
+cd    echo "$1 not yet implemented!"
+  fi
+}
 
 
 # Set to this to use case-sensitive completion
