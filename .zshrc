@@ -12,6 +12,7 @@ ZSH_THEME="../../.oh-my-zsh-themes/doubleend"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias workSpace="cd /Volumes/user/markm/WorkSpace/"
 alias la="ls -alht"
 alias apstart="sudo /usr/local/bin/apachectl start"
 alias apstop="sudo /usr/local/bin/apachectl stop"
@@ -38,28 +39,34 @@ alias rc="rails c"
 alias gst="git status"
 alias gco="git checkout"
 alias gcom="git checkout master"
-alias gcou="git checkout updates"
 alias gcob="git checkout -b"
 alias grb="git rebase"
 alias grbm="git rebase master"
 alias gcam="git commit -am"
 alias gb="git branch"
+alias gbd="git branch -d"
 alias gpom="git pull origin master"
 alias gf="git fetch"
+
 alias gm="git merge"
-alias gmu="git merge updates"
 alias ga="git add ."
 alias grd="git add -u ."
+alias gpusho="git push origin"
 alias gpushom="git push origin master"
+# git log
+alias glog="git log --pretty=oneline"
 
+
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 editzrc() {
-  cd ~
-  subl .zshrc
+  # cd ~
+  subl ~/.zshrc
 }
 
 reloadzrc() {
-  cd ~
+  # cd ~
   . ~/.zshrc
 }
 

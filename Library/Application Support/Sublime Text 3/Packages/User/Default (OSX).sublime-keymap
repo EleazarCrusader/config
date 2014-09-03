@@ -1,7 +1,19 @@
 [
-    { "keys": ["super+shift+."], "command": "erb", "context":
-      [
-        { "key": "selector", "operator": "equal", "operand": "text.html.ruby, text.haml, source.yaml, source.css, source.scss, source.js, source.coffee" }
-      ]
-    }  
+  { "keys": ["super+shift+."], "command": "erb", "context":
+    [
+      { "key": "selector", "operator": "equal", "operand": "text.html.ruby, text.haml, source.yaml, source.css, source.scss, source.js, source.coffee" }
+    ]
+  },
+  { "keys": ["ctrl+alt+super+down"], "command": "duplicate_line" },
+  { "keys": ["ctrl+shift+s"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet:"} },
+  { "keys": ["super+t", "super +f"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} },
+  // Code Folding
+  { "keys": ["ctrl+super+1"], "command": "fold_by_level", "args": {"level": 1} },
+  { "keys": ["ctrl+super+2"], "command": "fold_by_level", "args": {"level": 2} },
+  { "keys": ["ctrl+super+3"], "command": "fold_by_level", "args": {"level": 3} },
+  { "keys": ["ctrl+super+4"], "command": "fold_by_level", "args": {"level": 4} },
+  { "keys": ["ctrl+super+5"], "command": "fold_by_level", "args": {"level": 5} },
+  { "keys": ["ctrl+super+6"], "command": "fold_by_level", "args": {"level": 6} },
+  { "keys": ["ctrl+super+7"], "command": "fold_by_level", "args": {"level": 7} },
+  { "keys": ["ctrl+super+0"], "command": "unfold_all" }
 ]
