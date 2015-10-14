@@ -1,10 +1,13 @@
 {
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
+	"caret_style": "phase",
 	"color_scheme": "Packages/Theme - Nexus/Nexus.tmTheme",
-	"copy_with_empty_selection": false,
-	"find_selected_text": true,
+	"draw_minimap_border": true,
+	"fade_fold_buttons": false,
 	"font_size": 13,
+	"freesia_soft_tab_marker": true,
 	"highlight_line": true,
-	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -15,5 +18,6 @@
 	],
 	"tab_size": 2,
 	"theme": "Void.sublime-theme",
-	"translate_tabs_to_spaces": true
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false
 }

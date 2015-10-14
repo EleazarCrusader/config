@@ -12,7 +12,7 @@ ZSH_THEME="../../.oh-my-zsh-themes/doubleend"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias workSpace="cd /Volumes/user/markm/WorkSpace/"
+alias wspace="cd ~/WorkSpace/"
 alias la="ls -alht"
 alias apstart="sudo /usr/local/bin/apachectl start"
 alias apstop="sudo /usr/local/bin/apachectl stop"
@@ -39,23 +39,30 @@ alias rc="rails c"
 alias gst="git status"
 alias gco="git checkout"
 alias gcom="git checkout master"
+alias gco-="git checkout -"
 alias gcob="git checkout -b"
+alias grbi="git rebase -i"
 alias grb="git rebase"
 alias grbm="git rebase master"
-alias gcam="git commit -am"
+alias gca="git commit -a"
+alias gcamend="git commit --amend"
+alias gcundo="git reset --soft HEAD~1"
 alias gb="git branch"
 alias gbd="git branch -d"
-alias gpom="git pull origin master"
+alias gpul="git pull"
+alias gpulom="git pull origin master"
 alias gf="git fetch"
 
 alias gm="git merge"
-alias ga="git add ."
+alias ga="git add"
 alias grd="git add -u ."
 alias gpusho="git push origin"
 alias gpushom="git push origin master"
+alias grpo="git remote prune origin"
+alias gdif="git diff"
 # git log
-alias glog="git log --pretty=oneline"
-
+alias glog="git log"
+alias glogp="git log --pretty=oneline"
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
@@ -149,7 +156,6 @@ cd    echo "$1 not yet implemented!"
   fi
 }
 
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -180,4 +186,8 @@ unsetopt correct_all
 export EDITOR=nano
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/git/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

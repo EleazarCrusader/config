@@ -1,13 +1,21 @@
 {
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
-		"Better CoffeeScript",
-		"Git",
+		"Alignment",
 		"GitGutter",
+		"MavensMate",
+		"Mongoose CoffeeScript",
+		"Package Control",
+		"Salesforce Reference",
 		"SideBarEnhancements",
 		"SideBarGit",
-		"SublimeERB",
-		"Syntax Highlighting for Sass",
-		"Theme - Nexus"
+		"Syntax QBasic",
+		"Theme - Freesia",
+		"Theme - Nexus",
+		"VAlign"
 	]
 }

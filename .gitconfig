@@ -11,4 +11,6 @@
 	autosetuprebase = always
 [core]
 	editor = nano
+[commit]
+	template = ~/.gitmessage
 
