@@ -26,7 +26,6 @@ alias svns="svn status -u"
 alias svnu="sudo -H -u web-code svn up"
 alias sshtest1="ssh app1.test.daveramsey.com"
 
-#bundle alias
 alias bi="bundle install"
 alias be="bundle exec"
 alias ber="bundle exec rspec"
@@ -45,6 +44,7 @@ alias grbi="git rebase -i"
 alias grb="git rebase"
 alias grbm="git rebase master"
 alias gca="git commit -a"
+alias gcam="git commit -m"
 alias gcamend="git commit --amend --no-edit"
 alias gcamendm="git commit --amend"
 alias gcundo="git reset --soft HEAD~1"
@@ -74,7 +74,7 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 editzrc() {
   # cd ~
-  subl ~/.zshrc
+  atom ~/.zshrc
 }
 
 reloadzrc() {
