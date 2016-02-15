@@ -45,7 +45,8 @@ alias grbi="git rebase -i"
 alias grb="git rebase"
 alias grbm="git rebase master"
 alias gca="git commit -a"
-alias gcamend="git commit --amend"
+alias gcamend="git commit --amend --no-edit"
+alias gcamendm="git commit --amend"
 alias gcundo="git reset --soft HEAD~1"
 alias gb="git branch"
 alias gbd="git branch -d"
@@ -66,6 +67,10 @@ alias glogp="git log --pretty=oneline"
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# Salesforce Clean
+# cd automated-deploy
+#  ./start_ant_with_markdev.sh retrieveAll
 
 editzrc() {
   # cd ~
